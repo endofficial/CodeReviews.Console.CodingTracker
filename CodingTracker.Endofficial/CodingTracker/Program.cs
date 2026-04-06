@@ -9,7 +9,8 @@ namespace CodingTracker
     {
         static void Main(string[] args)
         {
-            SqlMapper.AddTypeHandler(new TimeOnlyTypeHandler()); // Register the TimeOnly type handler with Dapper
+            // Register the TimeOnly type handler with Dapper
+            SqlMapper.AddTypeHandler(new TimeOnlyTypeHandler()); 
 
             Database database = new();
             database.Initialize();
